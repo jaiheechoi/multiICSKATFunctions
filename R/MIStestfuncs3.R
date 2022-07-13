@@ -9,6 +9,8 @@
 #' @param rt_all n x k matrix of right times
 #' @param k number of outcomes
 #' @param d number of quadrature points
+#' @export
+#' fit_null_general()
 fit_null_general <- function(init_beta, epsilon, xDats, lt_all, rt_all, k, d) {
 
   # number of observations
@@ -192,6 +194,8 @@ fit_null_general <- function(init_beta, epsilon, xDats, lt_all, rt_all, k, d) {
 #' @param G n x q matrix of genetic information
 #' @param k number of outcomes
 #' @param d number of quadrature points
+#' @export
+#' multiICSKAT_p_general()
 multiICSKAT_p_general <- function(nullFit, xDats, lt_all, rt_all, Itt, a1, a2, G, k, d){
 
   # quadrature weights and roots
@@ -372,6 +376,8 @@ multiICSKAT_p_general <- function(nullFit, xDats, lt_all, rt_all, Itt, a1, a2, G
 #' @param tausq variance of subject specific random effect
 #' @param gMatCausal matrix of subsetted genetic information for only a select causal SNPs
 #' @param effectSizes vector of genetic effects
+#' @export
+#' gen_mICSKAT_dat()
 gen_mICSKAT_dat <- function(bhFunInv, obsTimes = 1:3, windowHalf = 0.5, n, k, tauSq, gMatCausal, effectSizes) {
 
   # true model has nothing
